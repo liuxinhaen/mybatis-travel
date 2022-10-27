@@ -1,4 +1,4 @@
-package com.example.mybatis.dao;
+package com.example.mybatis.test.dao;
 
 public interface IUserDao {
 
