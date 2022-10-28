@@ -1,6 +1,7 @@
 package com.example.mybatis.binding;
 
 import cn.hutool.core.lang.ClassScanner;
+import com.example.mybatis.session.Configuration;
 import com.example.mybatis.session.SqlSession;
 
 import java.util.HashMap;
@@ -11,6 +12,10 @@ import java.util.Set;
  * 映射器注册机
  */
 public class MapperRegistry {
+    private Configuration config;
+    public MapperRegistry(Configuration config) {
+        this.config = config;
+    }
 
     /**
      * 将已添加的映射器代理加入到 HashMap,自动扫描包下接口并把每个接口类映射的代理类全部存入映射器代理的 HashMap 缓存中。
